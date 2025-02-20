@@ -1,26 +1,21 @@
-All Rights Reserved
-Copyright © Lodestone Services LLC 2024
+MIT License
 
-This software and its associated documentation, code, and any other related materials (collectively referred to as "the Software", "the Service" or "the Product") are the intellectual property of Lodestone Services LLC and are protected under copyright law and international treaties.
+Copyright (c) 2025 Lodestone Services LLC
 
-All rights are reserved by the copyright holder. This means that without explicit prior written consent from Lodestone Services LLC, you may not:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Copy, reproduce, or duplicate the Software, in whole or in part, in any form or by any means.
-2. Modify, alter, or create derivative works based on the Software or any part thereof.
-3. Distribute, transmit, or share the Software by any medium, whether electronically, physically, or otherwise.
-4. Use the Software for commercial purposes, including but not limited to selling, sublicensing, or monetizing the Software or its derivatives.
-5. Reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Disclaimer of Warranties
-==========================================
-THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY, PERFORMANCE, AND SUITABILITY OF THE SOFTWARE LIES WITH YOU.
-
-Limitation of Liability
-==========================================
-IN NO EVENT SHALL LODESTONE SERVICES LLC, ITS AUTHORS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Usage Terms
-==========================================
-By using the Software, you agree to comply with these terms and all applicable laws and regulations governing intellectual property. Any unauthorized use of the Software may result in legal action, including but not limited to claims for damages and injunctive relief.
-
-For permissions, inquiries, or to report violations of these terms, please contact Lodestone Services LLC at business@lodestone.to
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
