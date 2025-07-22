@@ -62,9 +62,6 @@ public final class SickOfIt extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        BookshelfAPI.init(this, BookshelfAPI.Builder.createDisabled()
-                .useItemManager(true));
-
         bookshelf().getItemManager().register(new SickDisc(this));
         bookshelf().getItemManager().register(new SickDiscVillager(this));
 

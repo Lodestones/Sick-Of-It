@@ -2,3 +2,5 @@ name: SickOfIt
 version: '${project.version}'
 main: gg.lode.sickofit.SickOfIt
 api-version: '1.21'
+depend:
+  - Bookshelf
