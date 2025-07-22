@@ -14,11 +14,16 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.Objects;
 
 public final class SickOfIt extends JavaPlugin implements Listener {
 
     private Configuration config;
+    private static final String PACK_DOWNLOAD = "https://pack.lode.gg/download/Sick-Of-It-RP";
+    private static final String PACK_HASH_DOWNLOAD = "https://pack.lode.gg/hash/Sick-Of-It-RP";
 
     @Override
     public void onLoad() {
@@ -30,7 +35,20 @@ public final class SickOfIt extends JavaPlugin implements Listener {
     public void on(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (config().getBoolean("should_prompt")) {
-            player.setResourcePack("https://lode.gg/files/resourcepacks/sickofitpack.zip", "86e3b2930baef2103bfcf5e9893bf2e426ff3c77", config.getBoolean("should_force"));
+            player.setResourcePack(PACK_DOWNLOAD, Objects.requireNonNull(getHash()), config.getBoolean("should_force"));
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    public String getHash() {
+        try {
+            URL url = new URL(PACK_HASH_DOWNLOAD);
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
+                return reader.readLine(); // Assumes the hash is on the first line
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
