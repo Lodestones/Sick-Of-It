@@ -46,13 +46,12 @@ public class SickDisc extends CustomItem implements Listener {
             if (task.getBaseLocation().equals(block.getLocation())) {
                 task.getTasks().values().forEach(SuicideInstance::cancel);
                 task.cancel();
+                block.getLocation().getNearbyEntitiesByType(Player.class, 40)
+                        .forEach(closestPlayer -> closestPlayer.stopSound(SoundCategory.RECORDS));
                 return true;
             } else
                 return false;
         });
-
-        block.getLocation().getNearbyEntitiesByType(Player.class, 40)
-                .forEach(closestPlayer -> closestPlayer.stopSound(SoundCategory.RECORDS));
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
@@ -67,13 +66,12 @@ public class SickDisc extends CustomItem implements Listener {
                 if (task.getBaseLocation().equals(clickedBlock.getLocation())) {
                     task.getTasks().values().forEach(SuicideInstance::cancel);
                     task.cancel();
+                    clickedBlock.getLocation().getNearbyEntitiesByType(Player.class, 40)
+                            .forEach(closestPlayer -> closestPlayer.stopSound(SoundCategory.RECORDS));
                     return true;
                 } else
                     return false;
             });
-
-            clickedBlock.getLocation().getNearbyEntitiesByType(Player.class, 40)
-                    .forEach(closestPlayer -> closestPlayer.stopSound(SoundCategory.RECORDS));
         }
     }
 
