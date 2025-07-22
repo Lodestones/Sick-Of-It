@@ -1,5 +1,9 @@
 package gg.lode.sickofit.item;
 
+import gg.lode.bookshelfapi.api.Task;
+import gg.lode.bookshelfapi.api.item.CustomItem;
+import gg.lode.bookshelfapi.api.item.ItemBuilder;
+import gg.lode.bookshelfapi.api.util.MiniMessageHelper;
 import gg.lode.sickofit.SickInstance;
 import gg.lode.sickofit.SickOfIt;
 import gg.lode.sickofit.SuicideInstance;
@@ -18,10 +22,6 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import to.lodestone.bookshelfapi.api.Task;
-import to.lodestone.bookshelfapi.api.item.CustomItem;
-import to.lodestone.bookshelfapi.api.item.ItemBuilder;
-import to.lodestone.bookshelfapi.api.util.MiniMessageUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,7 +117,7 @@ public class SickDiscVillager extends CustomItem implements Listener {
 
         item.setAmount(0);
 
-        player.sendActionBar(MiniMessageUtil.deserialize("<aqua>Now playing: Sick of It"));
+        player.sendActionBar(MiniMessageHelper.deserialize("<aqua>Now playing: Sick of It"));
 
         clickedLocation.getNearbyEntitiesByType(Player.class, 40)
                 .forEach(closestPlayer -> Task.later(plugin, () -> {

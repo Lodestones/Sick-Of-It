@@ -1,5 +1,8 @@
 package gg.lode.sickofit;
 
+import gg.lode.bookshelfapi.BookshelfAPI;
+import gg.lode.bookshelfapi.IBookshelfAPI;
+import gg.lode.bookshelfapi.api.Configuration;
 import gg.lode.sickofit.item.SickDisc;
 import gg.lode.sickofit.item.SickDiscVillager;
 import org.bukkit.Material;
@@ -10,9 +13,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
-import to.lodestone.bookshelfapi.BookshelfAPI;
-import to.lodestone.bookshelfapi.IBookshelfAPI;
-import to.lodestone.bookshelfapi.api.Configuration;
 
 import java.util.Objects;
 
@@ -34,7 +34,6 @@ public final class SickOfIt extends JavaPlugin implements Listener {
         }
     }
 
-
     public IBookshelfAPI bookshelf() {
         return BookshelfAPI.getApi();
     }
@@ -45,6 +44,9 @@ public final class SickOfIt extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        BookshelfAPI.init(this, BookshelfAPI.Builder.createDisabled()
+                .useItemManager(true));
+
         bookshelf().getItemManager().register(new SickDisc(this));
         bookshelf().getItemManager().register(new SickDiscVillager(this));
 

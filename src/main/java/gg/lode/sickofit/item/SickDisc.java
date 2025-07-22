@@ -1,32 +1,29 @@
 package gg.lode.sickofit.item;
 
+import gg.lode.bookshelfapi.api.Task;
+import gg.lode.bookshelfapi.api.item.CustomItem;
+import gg.lode.bookshelfapi.api.item.ItemBuilder;
+import gg.lode.bookshelfapi.api.util.MiniMessageHelper;
 import gg.lode.sickofit.SickInstance;
 import gg.lode.sickofit.SickOfIt;
 import gg.lode.sickofit.SuicideInstance;
-import io.papermc.paper.entity.TeleportFlag;
-import io.papermc.paper.event.entity.EntityMoveEvent;
-import org.bukkit.*;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.block.Jukebox;
-import org.bukkit.entity.*;
+import org.bukkit.entity.Item;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
-import to.lodestone.bookshelfapi.api.Task;
-import to.lodestone.bookshelfapi.api.item.CustomItem;
-import to.lodestone.bookshelfapi.api.item.ItemBuilder;
-import to.lodestone.bookshelfapi.api.util.MiniMessageUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class SickDisc extends CustomItem implements Listener {
@@ -120,7 +117,7 @@ public class SickDisc extends CustomItem implements Listener {
 
         item.setAmount(0);
 
-        player.sendActionBar(MiniMessageUtil.deserialize("<aqua>Now playing: Sick of It"));
+        player.sendActionBar(MiniMessageHelper.deserialize("<aqua>Now playing: Sick of It"));
 
         clickedLocation.getNearbyEntitiesByType(Player.class, 40)
                 .forEach(closestPlayer -> Task.later(plugin, () -> {

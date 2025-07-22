@@ -1,16 +1,11 @@
 package gg.lode.sickofit;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.SoundCategory;
-import org.bukkit.block.Block;
-import org.bukkit.block.Jukebox;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
-import to.lodestone.bookshelfapi.api.util.MiniMessageUtil;
 
 import java.util.HashMap;
 import java.util.UUID;

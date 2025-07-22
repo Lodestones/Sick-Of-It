@@ -3,8 +3,6 @@ package gg.lode.sickofit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.block.data.Levelled;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.scheduler.BukkitRunnable;
 
